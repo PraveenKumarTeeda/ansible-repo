@@ -1,0 +1,15 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: This is to install package
+   hosts: praveen
+   tasks:
+    - name: Install httpd
+      yum: "name=httpd state=present"
+   
+    - name: edit the file
+      copy: src=/var/www/html/index.html dest=/var/www/html/
+      notify: restart the service
+   handlers:
+  
+    - name: restart the service
+      service: "name=httpd state=restarted"
