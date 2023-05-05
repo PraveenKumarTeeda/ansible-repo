@@ -1,0 +1,10 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: "This is to start the service"
+   hosts: praveen
+   tasks:
+     - name: copying files from server
+       copy: "src=/etc/ssh/sshd_config dest=/etc/ssh/"
+    
+     - name: service restarting
+       service: "name=sshd state=restarted"
