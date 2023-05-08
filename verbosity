@@ -1,0 +1,10 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: usage of Verbosity
+   hosts: praveen
+   tasks:
+     - name: Printing IP Address
+       debug:
+         msg: "My IP Address of server is :{{ansible_default_ipv4.address}}"
+         verbosity: 0
+...
