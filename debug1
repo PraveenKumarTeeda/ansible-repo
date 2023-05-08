@@ -1,0 +1,22 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: Checking kernel version
+   hosts: praveen
+   tasks:
+    - name: server kernel
+      command: uname -a
+      register: kernel
+    - debug: var=kernel.stdout
+    - name: server date
+      command: date
+      register: date
+    - debug: var=date.stdout
+    - name: server time
+      command: uptime
+      register: up
+    - debug: var=uptime.stdout
+    - name: server hostname
+      command: hostname
+      register: name
+    - debug: var=hostname.stdout
+...
