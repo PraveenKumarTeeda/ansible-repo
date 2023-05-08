@@ -1,0 +1,8 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: This is line2
+   hosts: praveen
+   tasks:
+    - debug:
+        msg: "welcome to india"
+...
