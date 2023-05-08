@@ -1,0 +1,13 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: Create Multiple Files
+   hosts: praveen
+   tasks:
+    - name: File Creation
+      file: dest=/tmp/{{item}} state=touch
+      with_items:
+        - file11
+        - file22
+        - file33
+        - file44
+...
