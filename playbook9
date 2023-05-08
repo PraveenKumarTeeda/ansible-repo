@@ -1,0 +1,11 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: checking kernel version
+   hosts: praveen
+   tasks:
+     - name: kernel info
+       command: uname -a
+...
+#!/usr/bin/ansible-playbook
+---
+[A[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
