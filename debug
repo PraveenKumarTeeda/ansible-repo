@@ -1,0 +1,10 @@
+#!/usr/bin/ansible-playbook	
+---
+ - name: kernel
+   hosts: praveen
+   tasks:
+     - name: server kernel
+       command: uname -a
+       register: kernel
+     - debug: var=kernel.stdout
+...
