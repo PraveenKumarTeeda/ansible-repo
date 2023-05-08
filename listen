@@ -1,0 +1,12 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: Copying file from server
+   hosts: praveen
+   tasks:
+    - name: file copying
+      copy: src=/etc/ssh/sshd_config dest=/etc/ssh/
+      register: edit
+    - name: service sshd restarting
+      action: service name=sshd state=restarted
+      when: edit.changed
+...
