@@ -1,0 +1,5 @@
+#[D$# [D[D[D[D[D[D[Decho "$# value = $#"
+echo $1[D[D"$1 value = $1"
+echo "$2 value = $2"
+echo "$@ value =$@[D[D[D[C $@"
+echo "$$ value = $$"
